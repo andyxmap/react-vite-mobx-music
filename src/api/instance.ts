@@ -4,7 +4,7 @@ import {useEnv} from "@/hooks/useEnv"
 const env = useEnv()
 
 const instance = axios.create({
-    baseURL: env.backend_url,
+    baseURL: env.baseUrl,
     timeout: 120000,
 });
 

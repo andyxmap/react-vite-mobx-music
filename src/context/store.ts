@@ -1,8 +1,8 @@
-import { JokeStore } from "@/mobx/joke"
+import { MapStore } from "@/mobx/map"
 import {createContext, useContext} from "react"
 
-const store = new JokeStore()
+const store = new MapStore()
 const StoreContext = createContext<typeof store>(store)
 const useStoreContext = () => useContext(StoreContext)
 
-export {useStoreContext, StoreContext}
+export {useStoreContext, StoreContext, store}

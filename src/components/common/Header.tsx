@@ -1,4 +1,4 @@
-import { Button } from "@material-tailwind/react"
+
 import {Link as Scroll} from "react-scroll"
 import ReactIcon from "./ReactIcon"
 import ViteIcon from "./ViteIcon"
@@ -13,7 +13,7 @@ export default () => {
                         <span className="text-indigo-400"> 😘</span>
                     </h1>
                     <p className="text-gray-300 max-w-xl leading-relaxed sm:mx-auto lg:ml-0">
-                        Simple Starter template use Vite, React, Mobx and Deeezer Api Music
+                        Simple Starter template use Vite, React, Mobx and Geopify geocoding Api
                     </p>
                     <div className="pt-10 items-center justify-center space-y-3 sm:space-x-6 sm:space-y-0 sm:flex lg:justify-start">
                         <Scroll to="to-visit" smooth>
@@ -21,7 +21,7 @@ export default () => {
                             Get started
                         </a>
                         </Scroll>
-                        <a className="px-7 py-3 w-full bg-white text-gray-800 text-center rounded-md shadow-md block sm:w-auto">
+                        <a href="/map" className="px-7 py-3 w-full bg-white text-gray-800 text-center rounded-md shadow-md block sm:w-auto">
                              Try It
                         </a>
                     </div>

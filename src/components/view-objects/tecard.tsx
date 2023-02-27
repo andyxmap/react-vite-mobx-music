@@ -13,8 +13,8 @@ export default function TecCard({ img, content }: { img: JSX.Element, content: J
     return (
 
         <Card className="w-full shadow-lg p-4">
-            <CardHeader color="blue-gray" className="h-32 flex place-items-center justify-center">
-                <div className="h-2/3 ">
+            <CardHeader color="blue-gray" className="h-32 flex place-items-center justify-center place-content-center">
+                <div className="h-2/3">
                 {img}
                 </div>
             </CardHeader>

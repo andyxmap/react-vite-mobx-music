@@ -4,7 +4,6 @@ export default function() {
       xmlns="http://www.w3.org/2000/svg"
       width="100%"
       height="100%"
-      preserveAspectRatio="xMinYMin meet"
       viewBox="0 0 256 249"
     >
       <g fill="#161614">
