@@ -1,5 +1,4 @@
-import instance from "@/api/instance"
-import { useEnv } from "@/hooks/useEnv"
+import { useApi } from "@/services/api.service"
 import { FeatureCollection } from "geojson"
 import { observable, action, makeAutoObservable } from "mobx"
 import { ViewState } from "react-map-gl"
@@ -22,14 +21,7 @@ export class MapStore {
         this.fetching = true
         const url = encodeURI(`/v1/geocode/search?text=${first} ${second} ${main}`)
         try {
-            const response = await instance.get<FeatureCollection>(url, {
-                params:{
-                    "apiKey":useEnv().apiKey,
-                },
-                headers:{
-                    "Access-Control-Allow-Origin": "*"
-                }
-            })
+            const response = await useApi(url)
             
             this.setResponse(response.data)
         } catch (error) {

@@ -1,27 +1,14 @@
 import {Navigate} from "react-router-dom"
-import {useUserSession} from "@/hooks/user"
-import { useAppDispatch } from "@/hooks/reduxHooks"
-import { setAuth } from "@/redux/state/userStateSlice"
 
 interface IProps {
   children: React.ReactElement
+  controlFunction : ()=> boolean
 }
 
 export const PrivateRouter = (props:IProps)=> {
    
-   const {getUserSession} = useUserSession()
-   const dispatch = useAppDispatch();
-   const session = getUserSession()
-   if(session == null){
-    
-    return (
-        <Navigate to="/"></Navigate>
-    )
-   }else{
-    dispatch(setAuth(session));
-    return props.children
-   }
-
+   return props.controlFunction() ? <Navigate to="/"></Navigate> : props.children
+   
 }
 
 export default PrivateRouter;

@@ -21,21 +21,17 @@ export default function TecCard({ img, content }: { img: JSX.Element, content: J
             <CardBody className="text-center">
                 {content}
             </CardBody>
-
-
         </Card>
     );
 
 }
 
 export const ListCard = ({ children }: any) => {
-
     return (
         
             <div className="grid md:grid-cols-3 gap-6">
                 {children}
-            </div>
-        
+            </div>    
     )
 }
 
