@@ -12,8 +12,7 @@ export default function Footer() {
         <a
           className="w-10 h-10 m-1 rounded-full flex items-center justify-center"
           href="https://github.com/andyxmap"
-          target="b
-            "
+          target="_blank"
         >
           <Icon></Icon>
         </a>
