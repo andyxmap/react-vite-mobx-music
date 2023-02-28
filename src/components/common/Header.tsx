@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom"
 import {Link as Scroll} from "react-scroll"
 import ReactIcon from "./ReactIcon"
 import ViteIcon from "./ViteIcon"
@@ -21,9 +22,9 @@ export default () => {
                             Get started
                         </a>
                         </Scroll>
-                        <a href="/map" className="px-7 py-3 w-full bg-white text-gray-800 text-center rounded-md shadow-md block sm:w-auto">
+                        <Link to="/map" className="px-7 py-3 w-full bg-white text-gray-800 text-center rounded-md shadow-md block sm:w-auto">
                              Try It
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div className="flex-1 text-center mt-7 lg:mt-0 lg:ml-3 flex">
