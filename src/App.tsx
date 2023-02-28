@@ -10,7 +10,7 @@ import {
 import { SnackbarUtilsConfigurator } from './utilities';
 
 
-const routes = await routeBasedFile()
+const routes = routeBasedFile()
 const router = createBrowserRouter(routes.map(({path,Element,...rest})=>{
   return { 
     path: path,

@@ -1,6 +1,6 @@
-export async function routeBasedFile() {
+export function routeBasedFile() {
     const routes = []
-    const pages = import.meta.glob("@/pages/**/*.tsx",{eagler:true} as any);
+    const pages = import.meta.globEager("@/pages/**/*.tsx");
     for (const path in pages) {
       
       const fileName = path.match(/\.\/pages\/(.*)\.(tsx|jsx)$/)?.[1];
@@ -8,7 +8,7 @@ export async function routeBasedFile() {
         continue;
       }
       
-    const mod = await pages[path]()
+    const mod = pages[path]
 
     let normalize = ""
     if(fileName === "404"){
