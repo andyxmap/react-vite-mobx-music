@@ -19,7 +19,8 @@ export const userRegisterValidationSchema = yup.object({
     password_repeat: yup.string().label('Confirme contraseña').required().oneOf([yup.ref('password'), null], 'Las contraseñas deben coincidir'),
   });
 
-  type userC = yup.InferType<typeof userLoginValidationSchema>;
+  //example infer type from yup validator
+  type userInferType = yup.InferType<typeof userLoginValidationSchema>;
   
   
 

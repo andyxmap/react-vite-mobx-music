@@ -8,7 +8,7 @@ const Map = () => {
   const store = useStoreContext();
 
   return (
-    <div className="flex flex-col place-items-center w-full min-h-screen bg-indigo-200 text-white">
+    <div className="flex flex-col place-items-center w-full min-h-screen bg-indigo-200 text-white h-screen">
       <Mapform
         handler={(data) => {
           store.useGeocode(data.firststreet, data.secondstreet, data.mainstreet);
@@ -21,6 +21,7 @@ const Map = () => {
         </MapProvider>
         
       </div>
+      
     </div>
   );
 };
